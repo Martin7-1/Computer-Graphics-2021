@@ -4,6 +4,8 @@
 # 本文件只允许依赖math库
 import math
 
+# 注：参考的文章 or 内容都以列在了每个算法的开头处
+
 
 def draw_line(p_list, algorithm):
     """绘制线段
