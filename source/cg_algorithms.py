@@ -319,7 +319,7 @@ def translate(p_list, dx, dy):
     for i in range(len(p_list)):
         xi = p_list[i][0]
         yi = p_list[i][1]
-        result.append((xi + dx, yi + dy))
+        result.append([int(xi + dx), int(yi + dy)])
     return result
 
 
@@ -340,7 +340,7 @@ def rotate(p_list, x, y, r):
         yi = p_list[i][1]
         change_x = x + (xi - x) * math.cos(angle) - (yi - y) * math.sin(angle)
         change_y = y + (xi - x) * math.sin(angle) + (yi - y) * math.cos(angle)
-        result.append((change_x, change_y))
+        result.append([int(change_x), int(change_y)])
 
     return result
 
@@ -360,7 +360,7 @@ def scale(p_list, x, y, s):
         yi = p_list[i][1]
         change_x = x + (xi - x) * s
         change_y = y + (yi - y) * s
-        result.append((change_x, change_y))
+        result.append([int(change_x), int(change_y)])
 
     return result
 
