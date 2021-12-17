@@ -480,19 +480,19 @@ def cal_code(x, y, x_min, y_min, x_max, y_max):
     :param y_max: 裁剪窗口右下角y坐标
     :return: (int) 点[x, y]在该算法下的编码
     """
-    code = 0
+    code = inside_code
     if x < x_min:
         # 在左半边
-        code += left_code
+        code |= left_code
     elif x > x_max:
         # 在右半边
-        code += right_code
+        code |= right_code
     if y < y_min:
         # y轴是朝下的
         # 在上边
-        code += top_code
+        code |= top_code
     elif y > y_max:
         # 在下边
-        code += bottom_code
+        code |= bottom_code
 
     return code

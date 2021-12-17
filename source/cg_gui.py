@@ -498,7 +498,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.central_widget)
         self.statusBar().showMessage('空闲')
         self.resize(600, 600)
-        self.setWindowTitle('CG Demo')
+        self.setWindowTitle('CG2021-201250182')
 
     def get_id(self):
         _id = str(self.item_cnt)
